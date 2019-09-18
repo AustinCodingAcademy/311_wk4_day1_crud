@@ -17,7 +17,7 @@
 -- 	state = 'REDACTED'
 -- WHERE
 -- 	state = 'OH'
--- 
+
 -- SELECT
 -- 	id
 -- FROM
