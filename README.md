@@ -51,7 +51,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
-select \*
+SELECT \*
 FROM users;
 
 INSERT INTO users(first_name, last_name)
