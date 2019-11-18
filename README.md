@@ -17,6 +17,9 @@
 
 * Make sure you've selected the "admin" database
 
+<!-- I'm not sure I selected admin.... but it all seems to work? -->
+
+
 * Create a new query tab
   * Click the button on the top left that has a SQL file with a "plus" icon on it
 
@@ -34,11 +37,29 @@ We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STA
 
 1. Insert users `('test', 'user')` & `('test2', 'user')` into the users table. Use a SELECT statment to verfiy the existence of the new ids 501 and 502. Record just the INSERT statement in the section below. 
 
+<!-- INSERT INTO users 
+(first_name, last_name)
+VALUES
+('test', 'user'),
+('test2', 'user'); -->
+
 2. Pretend we are in the beginnings of an apocalyptic event. It started in Ohio. Update the `usersAddress` table and change every "address" in the state of OH to the text "REDACTED" since Ohio no longer exists. You should update 22 rows. Place this update statement in the section below. 
+
+
+<!-- UPDATE
+	usersAddress
+SET 
+	usersAddress.address = "REDACTED"
+WHERE
+	usersAddress.state = "OH"; -->
 
 3. Delete the user with the id of `114` from the `users` table.
 
 Did the above statment fail? Why? What does the error response say?
+
+<!-- Yes
+It says 1451 error code, 
+cannot delete or update a parent row, a foreign key constraint fails -->
 
 We cannot delete this user yet because other tables (usersContact, usersAddress) are children of this table. Remember when we talked about foreign keys in the last lesson? That means we need to delete the appropriate information from those tables before we can delete the user. 
 
@@ -51,18 +72,42 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+<!-- INSERT INTO users 
+(first_name, last_name)
+VALUES
+('test', 'user'),
+('test2', 'user'); -->
+
 
 2. UPDATE all Ohio addresses to "REDACTED":
 
+<!-- UPDATE
+	usersAddress
+SET 
+	usersAddress.address = "REDACTED"
+WHERE
+	usersAddress.state = "OH"; -->
+
 3. All three DELETES
 
-* DELETE from usersContact
+<!-- * DELETE from usersContact
+DELETE from
+usersContact
+WHERE user_id = 114; -->
 
 
 * DELETE from usersAddress
+<!-- 
+DELETE from
+usersAddress
+WHERE user_id = 114; -->
 
 
 * DELETE from users
+
+<!-- DELETE from 
+users
+WHERE id = 114; -->
 
 
 ## Summary
