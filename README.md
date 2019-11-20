@@ -1,4 +1,4 @@
-# SQL CRUD
+<!-- # SQL CRUD
 
 ## Setup
 
@@ -26,11 +26,11 @@
 
 * Click the lightning bolt icon to run the query
 
-* If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table
+* If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table -->
 
 ## Part 2 - CRUD data
 
-We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STATEMENTS in the "SQL" section of this README. The SQL instructions are intentionally written in plain english. It's up to you to translate that into the appropriate CRUD operations.
+<!-- We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STATEMENTS in the "SQL" section of this README. The SQL instructions are intentionally written in plain english. It's up to you to translate that into the appropriate CRUD operations. -->
 
 1. Insert users `('test', 'user')` & `('test2', 'user')` into the users table. Use a SELECT statment to verfiy the existence of the new ids 501 and 502. Record just the INSERT statement in the section below. 
 
