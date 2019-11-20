@@ -66,12 +66,12 @@ WHERE state='OH'
 * DELETE from usersContact
 
 DELETE FROM usersContact
-WHERE id='114'
+WHERE user_id='114'
 
 * DELETE from usersAddress
 
 DELETE FROM usersAddress
-WHERE id='114'
+WHERE user_id='114'
 
 * DELETE from users
 
