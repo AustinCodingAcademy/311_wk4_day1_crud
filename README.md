@@ -74,12 +74,23 @@ WHERE state = 'OH';
 3. All three DELETES
 
 * DELETE from usersContact
+DELETE FROM
+  usersContact
+WHERE
+  user_id = 114;
 
 
 * DELETE from usersAddress
+DELETE FROM 
+	usersAddress
+WHERE 
+user_id = 114;
 
 
 * DELETE from users
+
+DELETE FROM users
+WHERE id = 114;
 
 
 ## Summary
