@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS usersContact, usersAddress, users;
+-- DROP TABLE IF EXISTS usersContact, usersAddress, users;
 
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
