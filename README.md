@@ -51,19 +51,44 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+INSERT INTO users
+    (first_name, last_name)
+VALUES
+    ('test', 'User');
+
+    INSERT INTO users
+    (first_name, last_name)
+VALUES
+    ('test2', 'User');
+///////////////////////////////////////////////////
 
 2. UPDATE all Ohio addresses to "REDACTED":
+
+UPDATE
+    usersAddress
+SET
+    address = 'REDACTED'
+WHERE
+    state = "OH";
+
 
 3. All three DELETES
 
 * DELETE from usersContact
+DELETE FROM usersContact WHERE id = 114;
+
+
 
 
 * DELETE from usersAddress
-
+DELETE FROM usersAddress WHERE id = 114;
 
 * DELETE from users
+DELETE FROM users WHERE users_id = 114;
 
+DELETE FROM usersAddress WHERE users_id = 114;
+
+DELETE FROM users WHERE id = 114;
 
 ## Summary
 
