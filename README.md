@@ -74,7 +74,7 @@ WHERE
 delete from
 	usersContact
 where 
-	id = 114
+	user_id = 114
 
 
 * DELETE from usersAddress
@@ -82,7 +82,7 @@ where
 delete from
 	usersAddress
 where 
-	id = 114
+	user_id = 114
 
 
 * DELETE from users
