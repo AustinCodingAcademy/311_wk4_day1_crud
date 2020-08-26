@@ -51,19 +51,92 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+```SQL
+INSERT 
+	INTO users (first_name, last_name)
+VALUES
+	('test', 'user'),
+    ('test2', 'user');
+    
+SELECT
+	first_name,
+    last_name
+FROM
+	users
+WHERE	
+	id > 500
+```
 
 2. UPDATE all Ohio addresses to "REDACTED":
+
+```SQL
+UPDATE
+	usersAddress
+SET
+	address = 'redacted'
+WHERE 
+	state = 'OH';
+    
+SELECT
+	address,
+    count(*) as tally
+FROM
+	usersAddress
+WHERE 
+	state = 'oh'
+GROUP BY
+	address;
+```
 
 3. All three DELETES
 
 * DELETE from usersContact
 
+```SQL
+DELETE FROM
+	usersContact
+WHERE
+	user_id = 114;
+
+SELECT
+  *
+FROM
+	usersContact
+WHERE
+	user_id = 114;
+```
 
 * DELETE from usersAddress
 
+```SQL
+DELETE FROM
+	usersAddress
+WHERE
+	user_id = 114; 
+
+SELECT
+  *
+FROM
+	usersAddress
+WHERE
+	user_id = 114;
+```
 
 * DELETE from users
 
+```SQL
+DELETE FROM
+	users
+WHERE
+	id = 114;
+
+SELECT
+  *
+FROM
+	users
+WHERE
+	id = 114;
+```
 
 ## Summary
 
