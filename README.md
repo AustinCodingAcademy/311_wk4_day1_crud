@@ -50,21 +50,61 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 ## SQL Statements
 
 1. INSERT two users:
-
-
+ 
+  ```SQL 
+  INSERT INTO users
+	(first_name, last_name)
+    VALUES
+    ('david', 'stephens'),
+    ('bob', 'frank');
+  SELECT * FROM users
+  ```
 2. UPDATE all Ohio addresses to "REDACTED":
+
+  ```SQL 
+    UPDATE usersAddress 
+    SET 
+        address = 'REDACTED'
+    WHERE
+        state = 'OH';
+  SELECT * FROM usersAddress
+  ```
 
 3. All three DELETES
 
 * DELETE from usersContact
-
+  ```SQL
+      DELETE FROM usersContact
+      WHERE user_id = 114;
+        
+      SELECT 
+          *
+      FROM
+          usersContact
+  ```
 
 * DELETE from usersAddress
-
+  ```SQL
+      DELETE FROM usersAddress
+      WHERE user_id = 114;
+        
+      SELECT 
+          *
+      FROM
+          usersAddress;
+  ```
 
 * DELETE from users
-
-
+  ```SQL
+      DELETE FROM users
+  WHERE id = 114;
+    
+  SELECT 
+      *
+  FROM
+      users;
+  ```
+  
 ## Summary
 
 Make sure we understand these CRUD operations because soon we will be pulling these SQL commands into our Node/Express application.
