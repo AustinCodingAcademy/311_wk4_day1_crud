@@ -73,6 +73,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 3. All three DELETES
 
 * DELETE from usersContact
+
   ```SQL
       DELETE FROM usersContact
       WHERE user_id = 114;
@@ -84,6 +85,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
   ```
 
 * DELETE from usersAddress
+
   ```SQL
       DELETE FROM usersAddress
       WHERE user_id = 114;
@@ -95,6 +97,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
   ```
 
 * DELETE from users
+
   ```SQL
       DELETE FROM users
   WHERE id = 114;
@@ -104,7 +107,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
   FROM
       users;
   ```
-  
+
 ## Summary
 
 Make sure we understand these CRUD operations because soon we will be pulling these SQL commands into our Node/Express application.
