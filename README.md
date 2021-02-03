@@ -32,7 +32,7 @@
 
 We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STATEMENTS in the "SQL" section of this README. The SQL instructions are intentionally written in plain english. It's up to you to translate that into the appropriate CRUD operations.
 
-1. Insert users `('test', 'user')` & `('test2', 'user')` into the users table. Use a SELECT statement to verfiy the existence of the new ids 501 and 502. Record just the INSERT statement in the section below. 
+1. Insert users `('test', 'user')` & `('test2', 'user')` into the users table. Use a SELECT statement to verify the existence of the new ids 501 and 502. Record just the INSERT statement in the section below. 
 
 2. Pretend we are in the beginnings of an apocalyptic event. It started in Ohio. Update the `usersAddress` table and change every "address" in the state of OH to the text "REDACTED" since Ohio no longer exists. You should update 22 rows. Place this update statement in the section below. 
 
