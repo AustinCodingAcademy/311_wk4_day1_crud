@@ -51,20 +51,34 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+      INSERT INTO users (first_name, last_name)
+      VALUES ('Test1', 'User1'), ('Test2', 'User2');
+
+SELECT * FROM users WHERE id = 501 && 502;
 
 2. UPDATE all Ohio addresses to "REDACTED":
+
+      UPDATE usersaddress SET address = "REDACTED" WHERE state = "OH";
 
 3. All three DELETES
 
 * DELETE from usersContact
 
+      DELETE FROM userscontact WHERE id = 114;
+      
 
 * DELETE from usersAddress
 
+      DELETE FROM usersaddress WHERE id = 114;
 
 * DELETE from users
+
+      DELETE FROM users WHERE id = 114;
+
+      <!-- ERROR code: 1451 cannot delete or update the parent row -->
 
 
 ## Summary
 
 Make sure we understand these CRUD operations because soon we will be pulling these SQL commands into our Node/Express application.
+
