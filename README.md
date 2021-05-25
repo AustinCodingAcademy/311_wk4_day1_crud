@@ -51,10 +51,29 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+    insert into admin.users (first_name, last_name)
+    values ('test', 'user'), ('test2', 'user');
+
 
 2. UPDATE all Ohio addresses to "REDACTED":
 
+    update usersAddress
+    set address = 'redacted'
+    where state = "OH";
+
 3. All three DELETES
+
+    delete from usersContact
+    where user_id = 114;
+
+    delete from usersAddress
+    where user_id = 114;
+
+    delete from users
+    where id = 114;
+
+
+
 
 * DELETE from usersContact
 
