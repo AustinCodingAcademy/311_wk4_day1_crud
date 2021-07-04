@@ -51,18 +51,45 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+SELECT * FROM Lazarus.users;
+
+INSERT INTO users
+    (first_Name, last_Name)
+VALUES
+    ('aaa', 'User'),
+    ('aaa2', 'User');
+    
+SELECT * FROM users WHERE first_name LIKE 'aaa%'
+
 
 2. UPDATE all Ohio addresses to "REDACTED":
 
+SELECT * FROM usersAddress WHERE state = 'OH';
+
+UPDATE usersAddress
+SET address = "REDACTED"
+WHERE state = 'OH'
+
 3. All three DELETES
 
-* DELETE from usersContact
+* DELETE from usersContact:
+
+DELETE FROM usersContact
+Where user_id = '114'
 
 
-* DELETE from usersAddress
+* DELETE from usersAddress:
+
+DELETE FROM usersAddress
+Where user_id = '114'
 
 
-* DELETE from users
+* DELETE from users:
+
+DELETE FROM users
+Where id = '114'
+
+
 
 
 ## Summary
