@@ -51,20 +51,45 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+INSERT INTO users 
+values 
+	(501, 'test', 'user'),
+	(502, 'test2', 'user');
+
 
 2. UPDATE all Ohio addresses to "REDACTED":
+
+UPDATE
+	usersAddress
+SET
+	address = 'REDACTED'
+WHERE
+	state = 'OH'
 
 3. All three DELETES
 
 * DELETE from usersContact
 
+DELETE FROM 
+	usersContact
+WHERE
+	user_id = 114
 
 * DELETE from usersAddress
+
+DELETE FROM 
+	usersAddress
+WHERE
+	user_id = 114
 
 
 * DELETE from users
 
-
+DELETE FROM 
+	users
+WHERE
+	id = 114
+  
 ## Summary
 
 Make sure we understand these CRUD operations because soon we will be pulling these SQL commands into our Node/Express application.
