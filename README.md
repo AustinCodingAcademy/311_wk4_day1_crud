@@ -51,18 +51,30 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+INSERT INTO users
+VALUES (DEFAULT, 'test', 'user'),
+	   (DEFAULT, 'test2', 'user');
 
 2. UPDATE all Ohio addresses to "REDACTED":
 
+UPDATE usersAddress
+SET state = 'REDACTED'
+WHERE state = 'OH';
+
 3. All three DELETES
 
-* DELETE from usersContact
+When attempting to first delete from users table I got Error Code: 1451. Cannot delete or update a parent row as users is the parent table to the usersAddress and usersContacts which both use the id as user_id
 
+So I ran the delete first in usersAddress and usersContact tables, then I ran the delete in users.
 
-* DELETE from usersAddress
+DELETE FROM usersAddress
+WHERE user_id = 114;
 
+DELETE FROM usersContact
+WHERE user_id = 114;
 
-* DELETE from users
+DELETE FROM users
+WHERE id = 114;
 
 
 ## Summary
