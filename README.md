@@ -2,7 +2,7 @@
 
 ## Setup
 
-* Open MySQL Workbench
+<!-- * Open MySQL Workbench
 
 * In order to UPDATE/DELETE rows without specifying keys (primary key) we need to disable safe mode in MySQL Workbench
 
@@ -11,10 +11,10 @@
     * _Note: there are three child dropdowns but just select the parent (SQL Editor)_
   * Scroll to the bottom and deselect the checkbox that says "Safe Updates"
 
-* Once safe mode is disabled you will need to disconnect and reconnect to your db
+* Once safe mode is disabled you will need to disconnect and reconnect to your db -->
 
 ## Part 1 - Initialize data
-
+<!-- 
 * Make sure you've selected the "admin" database
 
 * Create a new query tab
@@ -26,7 +26,7 @@
 
 * Click the lightning bolt icon to run the query
 
-* If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table
+* If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table -->
 
 ## Part 2 - CRUD data
 
@@ -51,18 +51,45 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
+<!-- INSERT INTO users
+    (first_name, last_name)
+VALUES
+    ('test', 'user'),
+    ('test2', 'user'); -->
+
 
 2. UPDATE all Ohio addresses to "REDACTED":
 
+<!-- UPDATE
+    usersAddress
+SET
+    address = 'REDACTED'
+WHERE
+    state = "OH"; -->
+
 3. All three DELETES
 
-* DELETE from usersContact
+<!-- -- 	* DELETE from usersContact
+DELETE FROM
+  usersContact
+WHERE
+  id = 114;
+  
+  
+-- 	* DELETE from usersAddress
+DELETE FROM
+  usersAddress
+WHERE
+  id = 114;
+  
+  
+-- 	* DELETE from users
+DELETE FROM
+  users
+WHERE
+  id = 114; -->
 
-
-* DELETE from usersAddress
-
-
-* DELETE from users
+  <!-- Another one I could not figure out, not sure why I still cannot delete the primary user after deleting the two associated table references -->
 
 
 ## Summary
