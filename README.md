@@ -28,7 +28,7 @@
 
 * If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table
 
-## Part 2 - CRUD data
+## Part 2 - CRUD  data
 
 We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STATEMENTS in the "SQL" section of this README. The SQL instructions are intentionally written in plain english. It's up to you to translate that into the appropriate CRUD operations.
 
@@ -46,6 +46,7 @@ We cannot delete this user yet because other tables (usersContact, usersAddress)
 This should make sense because we can't have user addresses that don't correspond to any user (since the user would have been deleted).
 
 Let's delete the appropriate information from `usersContact`, `usersAddress` and finally `users` all corresponding to the user id of 114. Put all three DELETE statments below.
+
 
 
 ## SQL Statements
