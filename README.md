@@ -28,7 +28,7 @@
 
 * If you refresh your schemas you should see a "users", "usersContact" and "usersAddress" table
 
-## Part 2 - CRUD data
+## Part 2 - CRUD  data
 
 We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STATEMENTS in the "SQL" section of this README. The SQL instructions are intentionally written in plain english. It's up to you to translate that into the appropriate CRUD operations.
 
@@ -39,6 +39,7 @@ We are going to run a couple INSERT/UPDATE/DELETE statements and put our SQL STA
 3. Delete the user with the id of `114` from the `users` table.
 
 Did the above statement fail? Why? What does the error response say?
+It didn't work because you can't delete or update a parent row, a foreign key constraint fails.
 
 We cannot delete this user yet because other tables (usersContact, usersAddress) are children of this table. Remember when we talked about foreign keys in the last lesson? That means we need to delete the appropriate information from those tables before we can delete the user. 
 
@@ -47,22 +48,24 @@ This should make sense because we can't have user addresses that don't correspon
 Let's delete the appropriate information from `usersContact`, `usersAddress` and finally `users` all corresponding to the user id of 114. Put all three DELETE statments below.
 
 
+
 ## SQL Statements
 
 1. INSERT two users:
+INSERT INTO testDemo.users (first_name,last_name)
+VALUES ('test','user'), ('test2','user');
 
 
 2. UPDATE all Ohio addresses to "REDACTED":
+   UPDATE testDemo.usersAddress SET address='REDACTED' WHERE state='OH';
 
 3. All three DELETES
 
-* DELETE from usersContact
+DELETE FROM testDemo.usersContact WHERE user_id='114'; // user_id is foreign key in child table
 
+DELETE FROM testDemo.usersAddress WHERE user_id='114'; // user_id is foreign key in child table
 
-* DELETE from usersAddress
-
-
-* DELETE from users
+DELETE FROM testDemo.users WHERE id='114';  //id is the primary key of parent table
 
 
 ## Summary
