@@ -6,7 +6,9 @@
 
 * In order to UPDATE/DELETE rows without specifying keys (primary key) we need to disable safe mode in MySQL Workbench
 
-  * In the top bar, select MySQL Workbench -> Preferences
+  * In the top bar, select 
+    * For Mac: MySQL Workbench -> Preferences
+    * For Windows: Edit -> Preferences
   * Select "SQL Editor"
     * _Note: there are three child dropdowns but just select the parent (SQL Editor)_
   * Scroll to the bottom and deselect the checkbox that says "Safe Updates"
@@ -51,19 +53,15 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 
 1. INSERT two users:
 
-
 2. UPDATE all Ohio addresses to "REDACTED":
 
 3. All three DELETES
 
 * DELETE from usersContact
 
-
 * DELETE from usersAddress
 
-
 * DELETE from users
-
 
 ## Summary
 
